@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: hometown-hub-api
+    runtime: node
+    plan: free
+    buildCommand: "cd backend && npm install"
+    startCommand: "cd backend && npm start"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        scope: build
+      - key: JWT_SECRET
+        scope: build
+      - key: CORS_ORIGIN
+        value: https://your-frontend-url.netlify.app
+      - key: PORT
+        value: 3000
