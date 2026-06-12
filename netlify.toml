@@ -1,0 +1,14 @@
+[build]
+  command = "cd frontend && npm install && npm run build"
+  publish = "frontend/dist"
+
+[env.production]
+  VITE_API_BASE_URL = "https://your-backend-url.com/api"
+
+[env.development]
+  VITE_API_BASE_URL = "http://localhost:3000/api"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
