@@ -1,0 +1,199 @@
+{
+  "users": [
+    {
+      "id": "u0",
+      "name": "Platform Admin",
+      "email": "admin@hometownhub.com",
+      "passwordHash": "435df5f4a92c85d87769deed9cb6df87:7b84cb4a9a9255767ce1ab533b072cf46bb970e7fc403ea6e4fc3e6336dd94e68ab4288b94534508b1db2b12d5a545af2656b323f3ae4c2ecaf14abe126aad20",
+      "role": "admin",
+      "hometown": "Platform",
+      "bio": "Platform administrator responsible for approving communities and resolving escalations."
+    },
+    {
+      "id": "u1",
+      "name": "Aarav Sharma",
+      "email": "aarav@example.com",
+      "passwordHash": "435df5f4a92c85d87769deed9cb6df87:7b84cb4a9a9255767ce1ab533b072cf46bb970e7fc403ea6e4fc3e6336dd94e68ab4288b94534508b1db2b12d5a545af2656b323f3ae4c2ecaf14abe126aad20",
+      "role": "member",
+      "hometown": "Jaipur",
+      "bio": "Software engineer living away from home and staying connected to local events."
+    },
+    {
+      "id": "u2",
+      "name": "Priya Singh",
+      "email": "priya@example.com",
+      "passwordHash": "435df5f4a92c85d87769deed9cb6df87:7b84cb4a9a9255767ce1ab533b072cf46bb970e7fc403ea6e4fc3e6336dd94e68ab4288b94534508b1db2b12d5a545af2656b323f3ae4c2ecaf14abe126aad20",
+      "role": "moderator",
+      "hometown": "Jaipur",
+      "bio": "Community organizer who helps manage local announcements and volunteering drives."
+    },
+    {
+      "id": "u3",
+      "name": "Smoke User",
+      "email": "smoke1777115572@example.com",
+      "hometown": "Udaipur",
+      "passwordHash": "0a94268925efc10081a567d1ae8de550:a756312ff69d47215267e0eeda5fd2ce63c15238d36b01a5f8d9e7b02ab901a7d2f0abd3d05f984c2d1e6fbedf56aaa0893f71fe1660c2b32bd976417c6c7b48",
+      "role": "member",
+      "bio": "New community member"
+    }
+  ],
+  "communities": [
+    {
+      "id": "c1",
+      "name": "Jaipur Roots",
+      "location": "Jaipur",
+      "description": "A digital home for people from Jaipur to share events, local news, and hometown memories.",
+      "category": "City",
+      "memberCount": 3,
+      "status": "approved",
+      "rules": [
+        "Respect fellow members",
+        "Keep posts relevant to the hometown community",
+        "Use announcements only for important updates"
+      ],
+      "moderators": [
+        "u2"
+      ],
+      "members": [
+        "u1",
+        "u2",
+        "u3"
+      ],
+      "pinnedPostId": "p2",
+      "createdBy": "u2",
+      "createdAt": "2026-04-20T12:00:00.000Z"
+    },
+    {
+      "id": "c2",
+      "name": "Udaipur Circle",
+      "location": "Udaipur",
+      "description": "Community for Udaipur residents and alumni.",
+      "category": "Community",
+      "memberCount": 1,
+      "status": "approved",
+      "rules": [
+        "Respect community members",
+        "Keep posts relevant",
+        "Follow moderator guidance"
+      ],
+      "moderators": [
+        "u3"
+      ],
+      "members": [
+        "u3"
+      ],
+      "pinnedPostId": null,
+      "createdBy": "u3",
+      "createdAt": "2026-04-25T11:17:00.313Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "p3",
+      "communityId": "c1",
+      "authorId": "u1",
+      "title": "Smoke Test Post",
+      "content": "Testing persistent post creation",
+      "type": "discussion",
+      "likes": 0,
+      "commentsCount": 0,
+      "createdAt": "2026-04-25T11:12:52.808Z",
+      "pinned": false
+    },
+    {
+      "id": "p1",
+      "communityId": "c1",
+      "authorId": "u1",
+      "type": "discussion",
+      "title": "Anyone attending the summer hometown meetup?",
+      "content": "I will be in Jaipur next month and would love to reconnect with people from our neighborhood.",
+      "likes": 18,
+      "commentsCount": 1,
+      "createdAt": "2026-04-25T09:00:00.000Z",
+      "pinned": false
+    },
+    {
+      "id": "p2",
+      "communityId": "c1",
+      "authorId": "u2",
+      "type": "announcement",
+      "title": "Community blood donation drive this Sunday",
+      "content": "Please join the volunteer team at the town hall. Registration opens at 9 AM.",
+      "likes": 31,
+      "commentsCount": 0,
+      "createdAt": "2026-04-24T12:00:00.000Z",
+      "pinned": true
+    }
+  ],
+  "comments": [
+    {
+      "id": "cm1",
+      "postId": "p1",
+      "authorId": "u2",
+      "content": "Yes, we are finalizing the venue this week.",
+      "createdAt": "2026-04-25T10:00:00.000Z"
+    }
+  ],
+  "events": [
+    {
+      "id": "e1",
+      "communityId": "c1",
+      "title": "Jaipur Heritage Walk",
+      "description": "A community-organized heritage walk for visiting members and residents.",
+      "date": "2026-05-03T06:30:00.000Z",
+      "venue": "Albert Hall Museum",
+      "attendees": [
+        "u1",
+        "u2"
+      ],
+      "organizerId": "u2"
+    },
+    {
+      "id": "e2",
+      "communityId": "c1",
+      "title": "Smoke Test Event",
+      "description": "Testing event creation",
+      "date": "2026-05-20T10:00",
+      "venue": "Community Hall",
+      "organizerId": "u1",
+      "attendees": [
+        "u1"
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "userId": "u1",
+      "title": "New announcement in Jaipur Roots",
+      "body": "A blood donation drive was posted in your community.",
+      "read": false,
+      "createdAt": "2026-04-25T12:30:00.000Z"
+    }
+  ],
+  "communityRequests": [
+    {
+      "id": "cr1",
+      "name": "Udaipur Circle",
+      "location": "Udaipur",
+      "description": "Community for Udaipur residents and alumni.",
+      "requestedBy": "u3",
+      "status": "approved",
+      "requestedAt": "2026-04-25T11:12:52.802Z",
+      "reviewedAt": "2026-04-25T11:17:00.313Z",
+      "reviewedBy": "u0"
+    }
+  ],
+  "membershipRequests": [
+    {
+      "id": "mr1",
+      "communityId": "c1",
+      "userId": "u3",
+      "status": "approved",
+      "requestedAt": "2026-04-25T11:12:52.872Z",
+      "reviewedAt": "2026-04-25T11:17:00.320Z",
+      "reviewedBy": "u2"
+    }
+  ],
+  "reports": []
+}
